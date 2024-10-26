@@ -3,26 +3,29 @@
 
 int main(){
 
-char str[5];
+char str[20];
+char temp;
 
 
 printf("Write a five letter word\n");
-scanf("%s", str);
+scanf("%s", &str[0]);
+int last = strlen(str);
+int last2 = strlen(str);
 
-for(int i = 0; i <= sizeof(str); i++)
-{
-  int length = sizeof(str);
-  char temp[length];
-  int j = 0;
-  j = length -i;
-  temp[j] = str[j]; 
-  str[i] = temp[j];
+for(int i = 0; i < last2/2 +1 ; i++){
 
+    temp = str[i];
+    str[i] = str[last];
+    str[last] = temp;
+    last--;
+    printf("1\n");
 }
 
+for(int j = 0; j < last2 +1; j++){
 
-printf("%s\n", str);
-
+    printf("%c", str[j]);
+}
+printf("\n");
 
 return 0;
 
