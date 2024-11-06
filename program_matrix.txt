@@ -1,0 +1,7 @@
+Your task is to write a program that performs various operations on a square matrix. The program should include the following functions using function pointer:
+
+multiply_constant: multiplies a matrix by a constant
+add_constant: adds a constant to a matrix
+transpose_matrix: transposes a matrix
+display_matrix: displays a matrix
+The program should also include a main function that allows the user to choose which operation to perform on the matrix.

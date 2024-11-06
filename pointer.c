@@ -17,7 +17,7 @@ printf("\n");
 
 for (int i = 0; i < 5; i++)
 {
-    printf("%d\n", (*ptr +i+1));
+    printf("%d\n", ptr[i]);
 }
 
     return 0;
