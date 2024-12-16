@@ -4,6 +4,7 @@
 
 unsigned int x;
 unsigned int y;
+int flag;
 
 
 
@@ -16,9 +17,9 @@ int main(){
     scanf("%d", &x);
     printf("Write the number the range should end at\n");
     scanf("%d", &y);
-    printf("\n");
 
     prime_function();
+    printf("\n");
 
 
 }
@@ -27,28 +28,30 @@ int main(){
 int prime_function()
 {
    
-    if(x < 2)
+
+    for(int i = x; i <= y; i++)
     {
-        x = 2;
-    }
-
-    while (x <= y)
-    {
-
-        for(int i = 2; i <= x/ 2; i++){
-
-        if(x % i == 0){
-
-            x++;
-        }
-        else
+        if (i == 0 || i == 1)
         {
-            printf("%d ", x);
-            x++;
+            continue;
         }
+
+        flag =1;
+
+        for(int j = 2; j <= i/2; j++)
+        {
+
+        if(i % j == 0)
+        {
+            flag = 0;
+            break;
+            
         }
         
-        
+        }
+    if(flag == 1){
+       printf("%d ", i); 
+    }
     } 
 
 }
